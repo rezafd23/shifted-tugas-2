@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b307b7-0a9f-4eb4-8e84-d9fbadcd5e55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beranda.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hubungi.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tentang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +48,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets\img" />
+      <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602751954721</updated>
-      <workItem from="1602751955752" duration="89000" />
+      <workItem from="1602751955752" duration="5695000" />
     </task>
     <servers />
   </component>
@@ -78,5 +85,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="0" width="585" height="680" key="find.popup" timestamp="1602769800010">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1602769800010" />
   </component>
 </project>
