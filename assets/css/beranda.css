@@ -1,0 +1,90 @@
+html{
+    scroll-behavior: smooth;
+}
+.header {
+    height: 150px;
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/11/c0/d3/11c0d343176a014fe218a94786077c66.jpg);
+    background-size: cover;
+}
+
+.header ul {
+    list-style-type:none;
+    padding-top: 100px;
+    padding-left: 5%;
+}
+
+.header li {
+    float: left;
+    margin: auto;
+    padding:5px 10px;
+}
+.header a{
+    text-decoration: none;
+}
+.header a:hover {
+    color: #007aff;
+}
+
+.header a {
+    color: #787b81;
+}
+.jumbotron{
+    background: url(https://www.free-largeimages.com/wp-content/uploads/2015/06/White_Background-1024x1024.jpg) fixed no-repeat;
+    background-size: cover;
+    height: 100vmin;
+}
+.divider{
+    height: 100px;
+    box-shadow: rgba(0,0,0,.2) 1px 1px 1px 1px;
+}
+.goals{
+    padding: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+.goals h2, blockquote{
+    text-align: center;
+}
+.goals blockquote{
+    margin-top: 30px;
+    font-size: 1.3em;
+    font-style: italic;
+}
+.row .goals:first-child{
+    border-right: rgba(0, 0, 0, .3) 2px solid;
+}
+ul li{
+    list-style: none;
+}
+.goals ul{
+    padding: 0;
+}
+.goals ul li{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 20pt;
+    font-style: italic;
+}
+.goals ul li i{
+    margin-right: 15px;
+}
+.carousel{
+    width: 100%;
+}
+.carousel-item img{
+    width: 100%;
+    height: 100vmin;
+    object-fit: cover;
+}
+.text-orange{
+    color: orange;
+}
+.btn-orange{
+    background-color: orange;
+}
+footer{
+    padding: 5px 0;
+    color: #fff;
+    text-align: center;
+}
