@@ -13,7 +13,7 @@
     <link href="assets/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
     <link href="assets/css/main.css" rel="stylesheet" media="all">
-
+    <script src="js/daftar.js" defer></script>
 </head>
 
 <body>
@@ -21,29 +21,29 @@
         <div class="wrapper wrapper--w680">
             <div class="card card-1">
                 <div class="bg-heading"></div>
-                <div class="card-body">
+                <div class="card-body" id="show_table">
                     <h2 class="title">PENDAFTARAN</h2>
                     <form method="POST">
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="NAMA" name="name">
+                            <input class="input--style-1" type="text" placeholder="NAMA" name="name" id="nama">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="email" placeholder="E-MAIL" name="email">
+                            <input class="input--style-1" type="email" placeholder="E-MAIL" name="email" id="email">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="password" placeholder="PASSWORD" name="password">
+                            <input class="input--style-1" type="password" placeholder="PASSWORD" name="password" id="password">
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE" name="birthday">
+                                    <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE" name="birthday" id="birthday">
                                     <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="gender">
+                                        <select name="gender" id="gender">
                                             <option disabled="disabled" selected="selected">JENIS KELAMIN</option>
                                             <option>Laki-laki</option>
                                             <option>Perempuan</option>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="p-t-20">
-                            <a class="btn btn--radius btn--green" href="Login.html">Lanjutkan</a>
+                            <a class="btn btn--radius btn--green" href="#" onclick="">Lanjutkan</a>
                         </div>
                     </form>
                 </div>
