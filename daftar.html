@@ -13,6 +13,12 @@
     <link href="assets/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 
     <link href="assets/css/main.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <style>
+        th {
+            text-align: center;
+        }
+    </style>
 
 </head>
 
@@ -23,17 +29,17 @@
                 <div class="bg-heading"></div>
                 <div class="card-body">
                     <h2 class="title">PENDAFTARAN</h2>
-                    <form method="POST">
+                    <form method="POST" name="formRegister">
                         <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="NAMA" name="name">
+                            <input class="input--style-1" type="text" placeholder="NAMA" name="name" id="nama">
                         </div>
                         <div class="input-group">
-                            <input class="input--style-1" type="email" placeholder="E-MAIL" name="email">
+                            <input class="input--style-1" type="email" placeholder="E-MAIL" name="email" id="email">
                         </div>
                         <div class="input-group">
                             <input class="input--style-1" type="password" placeholder="PASSWORD" name="password">
                         </div>
-                        <div class="row row-space">
+                        <!-- <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE" name="birthday">
@@ -52,14 +58,22 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="p-t-20">
-                            <a class="btn btn--radius btn--green" href="Login.html">Lanjutkan</a>
+                            <!-- <a class="btn btn-success" href="Login.html">Lanjutkan</a> -->
+                            <button type="button" class="btn btn-success addButton" onclick="getValue()">Input Data</button>
                         </div>
                     </form>
+                    <hr>
+                    <table border="1" width="100%" id="dataTable">
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+        
     </div>
 
     <script src="assets/jquery/jquery.min.js"></script>
@@ -68,6 +82,8 @@
     <script src="assets/datepicker/daterangepicker.js"></script>
 
     <script src="js/global.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
 </body>
 </html>
