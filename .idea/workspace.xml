@@ -20,19 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b307b7-0a9f-4eb4-8e84-d9fbadcd5e55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shifted Light Background-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/back.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/back.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/batch2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beranda.html" beforeDir="false" afterPath="$PROJECT_DIR$/beranda.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/galaxy.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/syariah.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/syariah.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/syariah.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tentang.html" beforeDir="false" afterPath="$PROJECT_DIR$/tentang.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/white.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/white.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/daftar.html" beforeDir="false" afterPath="$PROJECT_DIR$/daftar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -103,9 +93,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="0" width="585" height="680" key="find.popup" timestamp="1602813414131">
+    <state x="0" y="0" width="585" height="680" key="find.popup" timestamp="1602833921641">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1602813414131" />
+    <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1602833921641" />
   </component>
 </project>

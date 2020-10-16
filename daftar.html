@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/global.js" defer></script>
+    <script src="js/script.js" defer></script>
+
     <meta charset="UTF-8">
 
     <title>Tugas 2</title>
 
     <link href="assets/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <link href="assets/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+          rel="stylesheet">
 
     <link href="assets/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="assets/datepicker/daterangepicker.css" rel="stylesheet" media="all">
@@ -17,57 +21,91 @@
 </head>
 
 <body>
-    <div class=" main-bg font-robo">
-        <div class="wrapper wrapper--w680">
-            <div class="card card-1">
-                <div class="bg-heading"></div>
-                <div class="card-body">
-                    <h2 class="title">PENDAFTARAN</h2>
-                    <form method="POST">
-                        <div class="input-group">
-                            <input class="input--style-1" type="text" placeholder="NAMA" name="name">
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-1" type="email" placeholder="E-MAIL" name="email">
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-1" type="password" placeholder="PASSWORD" name="password">
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE" name="birthday">
-                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <div class="rs-select2 js-select-simple select--no-search">
-                                        <select name="gender">
-                                            <option disabled="disabled" selected="selected">JENIS KELAMIN</option>
-                                            <option>Laki-laki</option>
-                                            <option>Perempuan</option>
-                                        </select>
-                                        <div class="select-dropdown"></div>
-                                    </div>
-                                </div>
+<div class=" main-bg font-robo">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-1">
+            <div class="bg-heading"></div>
+            <div class="card-body">
+                <h2 class="title">PENDAFTARAN</h2>
+                <form name="formRegister" method="POST">
+                    <div class="input-group">
+                        <input class="input--style-1" type="text" placeholder="NAMA" name="nameForm">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-1" type="email" placeholder="E-MAIL" name="emailForm">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-1" type="password" placeholder="PASSWORD" name="passwordForm">
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE"
+                                       name="birthdayForm">
+                                <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                             </div>
                         </div>
-                        <div class="p-t-20">
-                            <a class="btn btn--radius btn--green" href="Login.html">Lanjutkan</a>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="gender">
+                                        <option value="-" selected="selected">JENIS KELAMIN</option>
+                                        <option value="L">Laki-laki</option>
+                                        <option value="P">Perempuan</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="p-t-20">
+                        <a class="btn btn--radius btn--green" onclick="saveData()">Lanjutkan</a>
+                    </div>
+                    <div class="p-t-20">
+                        <a class="btn btn--radius btn--green" onclick="saveEdit()">Save Edit</a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
-    <script src="assets/jquery/jquery.min.js"></script>
-    <script src="assets/select2/select2.min.js"></script>
-    <script src="assets/datepicker/moment.min.js"></script>
-    <script src="assets/datepicker/daterangepicker.js"></script>
+<div class=" main-bg font-robo">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-1">
+            <div class="bg-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Data Pendaftaran</h2>
+                <table class="tableData" width="100%" border="1">
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Jenis Kelamin</th>
+                    </tr>
+                </table>
+                <br>
+                <form name="formEdit" method="POST">
+                    <div class="input-group">
+                        <input class="input--style-1" type="text" placeholder="Masukan Nomor Data" name="nomorData">
+                    </div>
+                    <div class="p-t-20">
+                        <a class="btn btn--radius btn--green" onclick="editData()">Edit</a>
+                        <a class="btn btn--radius btn--green" onclick="deleteData()">Delete</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <script src="js/global.js"></script>
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/select2/select2.min.js"></script>
+<script src="assets/datepicker/moment.min.js"></script>
+<script src="assets/datepicker/daterangepicker.js"></script>
+
 
 </body>
 </html>
