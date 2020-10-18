@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="js/global.js" defer></script>
+    <script src="js/script.js" defer></script>
+
+    <meta charset="UTF-8">
+
+    <title>Tugas 2</title>
+
+    <link href="assets/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="assets/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+          rel="stylesheet">
+
+    <link href="assets/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="assets/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <link href="assets/css/main.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="assets/css/beranda.css">
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">-->
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+
+</head>
+
+<body>
+<div class="header" id="navBar">
+    <!--Buat header di atas-->
+    <!--    <ul>-->
+    <!--    </ul>-->
+    <nav id="nav">
+        <ul>
+            <li><a class="nav-text" style="color:whitesmoke;" onclick="showBeranda()">Beranda</a></li>
+            <li><a class="nav-text" style="color:whitesmoke;" onclick="showAbout()">Tentang</a>
+            </li>
+            <li><a class="nav-text" style="color:whitesmoke;" onclick="showCall()">Hubungi Kami</a></li>
+            <li><a class="nav-text" style="color:whitesmoke;" onclick="showLogin()">Masuk</a></li>
+            <li><a class="nav-text" style="color:whitesmoke;" onclick="showRegister()">Daftar</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="main-bg-3">
+    <div class=" main-bg font-robo" id="formRegister">
+        <div class="wrapper wrapper--w680">
+            <div class="card card-1">
+                <div class="bg-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">PENDAFTARAN</h2>
+                    <form name="formRegister" method="POST">
+                        <div class="input-group">
+                            <input class="input--style-1" type="text" placeholder="NAMA" name="nameForm">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="email" placeholder="E-MAIL" name="emailForm">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-1" type="password" placeholder="PASSWORD" name="passwordForm">
+                        </div>
+                        <div class="row row-space">
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE"
+                                           name="birthdayForm">
+                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="gender">
+                                            <option value="-" selected="selected">JENIS KELAMIN</option>
+                                            <option value="L">Laki-laki</option>
+                                            <option value="P">Perempuan</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-t-20">
+                            <a class="btn btn--radius btn--green" onclick="register()">Register</a>
+                        </div>
+                        <div class="p-t-20">
+                            <a class="btn btn--radius btn--green" onclick="showLogin()">Login</a>
+                        </div>
+                        <!--                    <div class="p-t-20">-->
+                        <!--                        <a class="btn btn&#45;&#45;radius btn&#45;&#45;green" onclick="saveEdit()">Save Edit</a>-->
+                        <!--                    </div>-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" main-bg-2 font-robo" id="formLogin">
+        <div class="isi">
+            <div class="isi-info">
+                <!--Buat disamping kiri-->
+                <h1>Login</h1>
+                <h1>BTPNS ShiftED Batch 2</h1>
+                <h3>Memberikan makna lebih dalam hidup setiap rakyat Indonesia.</h3>
+            </div>
+            <div class="isi-login">
+                <!--buat disamping kanan-->
+                <div class="wrapper wrapper--w680">
+                    <div class="card card-1">
+                        <div class="card-body">
+                            <!--                        <h2 class="title">PENDAFTARAN</h2>-->
+                            <form name="formLogin" method="POST">
+                                <div class="input-group">
+                                    <input  class="input--style-1" type="email" placeholder="E-MAIL" name="emailForm">
+                                </div>
+                                <div class="input-group">
+                                    <input class="input--style-1" type="password" placeholder="PASSWORD"
+                                           name="passwordForm">
+                                </div>
+                                <div class="p-t-20">
+                                    <a class="btn btn--radius btn--blue" onclick="login()">Login</a>
+                                    <!--                        <a class="btn btn&#45;&#45;radius btn&#45;&#45;green" onclick="saveData()">Lanjutkan</a>-->
+                                </div>
+                                <div class="p-t-20">
+                                    <a class="btn btn--radius btn--blue" onclick="goRegister()">Register</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="formBeranda">
+    <!--    <div class="header">-->
+    <!--        &lt;!&ndash;Buat header di atas&ndash;&gt;-->
+    <!--        <ul>-->
+    <!--            <li><a href="beranda.html">Beranda</a></li>-->
+    <!--            <li><a href="tentang.html?_ijt=emn73leln4oe6pjjdn0e65tgie">Tentang</a></li>-->
+    <!--            <li><a href="hubungi.html">Hubungi Kami</a></li>-->
+    <!--            <li><a href="Login.html">Masuk</a></li>-->
+    <!--            <li><a href="daftar.html">Daftar</a></li>-->
+    <!--        </ul>-->
+    <!--    </div>-->
+    <div class="jumbotron mb-0">
+        <h1 class="display-4 text-orange">Hello, We Are BTPNS ShiftED Batch 2!</h1>
+        <p class="lead">Bersama, Kita Ciptakan Peluang Untuk Tumbuh dan Ciptakan Hidup Yang Lebih Berarti!</p>
+        <hr class="my-4">
+        <a class="btn btn-orange text-white btn-lg" href="#more" role="button"></i> Learn more</a>
+    </div>
+    <div class="row m-0" id="more">
+        <div class="col goals">
+            <h2>Tujuan Kami</h2>
+            <hr>
+            <blockquote>
+                "Bersama Mencapai Impian"
+            </blockquote>
+        </div>
+        <div class="col goals">
+            <h2>Apa Yang Menjadi Perhatian Kami</h2>
+            <hr>
+            <ul>
+                <li></i>Professionals</li>
+                <li></i>Mutual Respect</li>
+                <li></i>Integrity</li>
+                <li></i>Team Work</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="10000">
+                    <img src="assets/img/01.png" class="d-block w-100" alt="...">
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="card card-1">
+        <div class="card-body">
+            <h2 class="title">Data Pendaftaran</h2>
+            <table class="tableData" width="100%" border="1">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Tanggal Lahir</th>
+                    <th>Jenis Kelamin</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+            <br>
+            <div class="card-body">
+                <h2 class="title">Edit Data</h2>
+                <form name="formEdit" method="POST">
+                    <div class="input-group">
+                        <input class="input--style-1" type="text" placeholder="NAMA" name="nameForm">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-1" type="email" placeholder="E-MAIL" name="emailForm">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-1" type="password" placeholder="PASSWORD" name="passwordForm">
+                    </div>
+                    <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-1 js-datepicker" type="text" placeholder="BIRTHDATE"
+                                       name="birthdayForm">
+                                <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="gender">
+                                        <option value="-" selected="selected">JENIS KELAMIN</option>
+                                        <option value="L">Laki-laki</option>
+                                        <option value="P">Perempuan</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-1" type="text" name="id" style="visibility: hidden">
+                    </div>
+                    <div class="p-t-20">
+                        <a class="btn btn--radius btn--green" onclick="saveEdit()">Simpan</a>
+                    </div>
+                    <!--                    <div class="p-t-20">-->
+                    <!--                        <a class="btn btn&#45;&#45;radius btn&#45;&#45;green" onclick="saveEdit()">Save Edit</a>-->
+                    <!--                    </div>-->
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="main-bg font-robo" id="formCall">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-1">
+            <div class="card-body">
+                <h2 class="title" style="text-align: center">HUBUNGI KAMI</h2>
+                <form name="formAbout" method="POST">
+                    <div class="input-group">
+                        <input class="input--style-1" type="text" placeholder="NAMA" name="nameForm">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-1" type="email" placeholder="Email" name="emailForm">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-1" type="tel" placeholder="No HP" name="emailForm">
+                    </div>
+                    <div class="input-group">
+                        <textarea name="" id="" cols="60" rows="10" class="input--style-1"
+                                  placeholder="Pesan"></textarea>
+                    </div>
+                    <div class="p-t-20">
+                        <a class="btn btn--radius btn--blue" href="#intro">Kirim Pesan</a>
+                        <!--                        <a class="btn btn&#45;&#45;radius btn&#45;&#45;green" onclick="saveData()">Lanjutkan</a>-->
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-bg font-robo" id="formAbout">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-1">
+            <div class="card-body box">
+                <img src="assets/img/syariah.jpg" alt="" class="box-img">
+                <h1>BTPN SYARIAH</h1>
+                <h3>Visi :</h3>
+                <p>Menjadi bank syariah terbaik untuk keuangan inklusif, mengubah hidup berjuta rakyat Indonesia</p>
+                <h3>Misi :</h3>
+                <p>Bersama, kita ciptakan kesempatan tumbuh dan hidup yang lebih berarti</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="box">-->
+<!--   -->
+<!--</div>-->
+<!--        &lt;!&ndash;        <div class="card card-1">&ndash;&gt;-->
+<!--        &lt;!&ndash;            <div class="bg-heading"></div>&ndash;&gt;-->
+<!--        &lt;!&ndash;            <div class="card-body">&ndash;&gt;-->
+<!--        &lt;!&ndash;                <h2 class="title">Data Pendaftaran</h2>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <table class="tableData" width="100%" border="1">&ndash;&gt;-->
+<!--        &lt;!&ndash;                    <tr>&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <th>No</th>&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <th>Nama</th>&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <th>Email</th>&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <th>Password</th>&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <th>Tanggal Lahir</th>&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <th>Jenis Kelamin</th>&ndash;&gt;-->
+<!--        &lt;!&ndash;                    </tr>&ndash;&gt;-->
+<!--        &lt;!&ndash;                </table>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <br>&ndash;&gt;-->
+<!--        &lt;!&ndash;                <form name="formEdit" method="POST">&ndash;&gt;-->
+<!--        &lt;!&ndash;                    <div class="input-group">&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <input class="input&#45;&#45;style-1" type="text" placeholder="Masukan Nomor Data" name="nomorData">&ndash;&gt;-->
+<!--        &lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--        &lt;!&ndash;                    <div class="p-t-20">&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <a class="btn btn&#45;&#45;radius btn&#45;&#45;green" onclick="editData()">Edit</a>&ndash;&gt;-->
+<!--        &lt;!&ndash;                        <a class="btn btn&#45;&#45;radius btn&#45;&#45;green" onclick="deleteData()">Delete</a>&ndash;&gt;-->
+<!--        &lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--        &lt;!&ndash;                </form>&ndash;&gt;-->
+<!--        &lt;!&ndash;            </div>&ndash;&gt;-->
+<!--        &lt;!&ndash;        </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/select2/select2.min.js"></script>
+<script src="assets/datepicker/moment.min.js"></script>
+<script src="assets/datepicker/daterangepicker.js"></script>
+
+
+</body>
+</html>

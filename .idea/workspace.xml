@@ -20,9 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b307b7-0a9f-4eb4-8e84-d9fbadcd5e55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/overlay.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/daftar.html" beforeDir="false" afterPath="$PROJECT_DIR$/daftar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentang.html" beforeDir="false" afterPath="$PROJECT_DIR$/tentang.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -49,16 +53,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets\css" />
+      <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets\img" />
+      <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets\img" />
       <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets" />
     </key>
@@ -74,6 +79,7 @@
       <workItem from="1602751955752" duration="5849000" />
       <workItem from="1602772376675" duration="372000" />
       <workItem from="1602813097152" duration="722000" />
+      <workItem from="1603028475032" duration="14115000" />
     </task>
     <servers />
   </component>
@@ -93,9 +99,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="0" width="585" height="680" key="find.popup" timestamp="1602833921641">
+    <state x="411" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603034126317">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1602833921641" />
+    <state x="411" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1603034126317" />
+    <state x="0" y="0" width="585" height="680" key="find.popup" timestamp="1603041293538">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603041293538" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603031228249">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603031228249" />
   </component>
 </project>
