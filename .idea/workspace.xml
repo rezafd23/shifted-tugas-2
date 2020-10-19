@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07b307b7-0a9f-4eb4-8e84-d9fbadcd5e55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/overlay.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/daftar.html" beforeDir="false" afterPath="$PROJECT_DIR$/daftar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tentang.html" beforeDir="false" afterPath="$PROJECT_DIR$/tentang.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -80,6 +76,7 @@
       <workItem from="1602772376675" duration="372000" />
       <workItem from="1602813097152" duration="722000" />
       <workItem from="1603028475032" duration="14115000" />
+      <workItem from="1603073692666" duration="13653000" />
     </task>
     <servers />
   </component>
@@ -103,13 +100,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="411" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1603034126317" />
-    <state x="0" y="0" width="585" height="680" key="find.popup" timestamp="1603041293538">
+    <state x="0" y="0" width="1273" height="667" maximized="true" key="dock-window-1" timestamp="1603115251246">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603041293538" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603031228249">
+    <state x="0" y="0" width="1273" height="667" maximized="true" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1603115251246" />
+    <state x="0" y="0" width="585" height="680" key="find.popup" timestamp="1603074153755">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603031228249" />
+    <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603074153755" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603118590975">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1603118590975" />
   </component>
 </project>

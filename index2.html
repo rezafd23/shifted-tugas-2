@@ -34,7 +34,7 @@
             <li><a class="nav-text" style="color:whitesmoke;" onclick="showAbout()">Tentang</a>
             </li>
             <li><a class="nav-text" style="color:whitesmoke;" onclick="showCall()">Hubungi Kami</a></li>
-            <li><a class="nav-text" style="color:whitesmoke;" onclick="showLogin()">Masuk</a></li>
+            <li><a class="nav-text" style="color:whitesmoke;" onclick="showLogin()">Logout</a></li>
             <li><a class="nav-text" style="color:whitesmoke;" onclick="showRegister()">Daftar</a></li>
         </ul>
     </nav>
@@ -67,15 +67,18 @@
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <div class="rs-select2 js-select-simple select--no-search">
+<!--                                    <div class="rs-select2 js-select-simple select&#45;&#45;no-search">-->
                                         <select name="gender">
-                                            <option value="-" selected="selected">JENIS KELAMIN</option>
+                                            <option value="-">JENIS KELAMIN</option>
                                             <option value="L">Laki-laki</option>
                                             <option value="P">Perempuan</option>
                                         </select>
                                         <div class="select-dropdown"></div>
-                                    </div>
+<!--                                    </div>-->
                                 </div>
+                            </div>
+                            <div class="input-group">
+                                <input class="input--style-1" type="hidden" name="id">
                             </div>
                         </div>
                         <div class="p-t-20">
@@ -115,7 +118,7 @@
                                            name="passwordForm">
                                 </div>
                                 <div class="p-t-20">
-                                    <a class="btn btn--radius btn--blue" onclick="login()">Login</a>
+                                    <a class="btn btn--radius btn--blue" onclick="doLogin()">Login</a>
                                     <!--                        <a class="btn btn&#45;&#45;radius btn&#45;&#45;green" onclick="saveData()">Lanjutkan</a>-->
                                 </div>
                                 <div class="p-t-20">
@@ -223,14 +226,14 @@
                         </div>
                         <div class="col-2">
                             <div class="input-group">
-                                <div class="rs-select2 js-select-simple select--no-search">
-                                    <select name="gender">
-                                        <option value="-" selected="selected">JENIS KELAMIN</option>
+<!--                                <div class="rs-select2 js-select-simple select&#45;&#45;no-search">-->
+                                    <select id="gender" name="gender">
+                                        <option value="-">JENIS KELAMIN</option>
                                         <option value="L">Laki-laki</option>
                                         <option value="P">Perempuan</option>
                                     </select>
                                     <div class="select-dropdown"></div>
-                                </div>
+<!--                                </div>-->
                             </div>
                         </div>
                     </div>
