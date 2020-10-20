@@ -124,6 +124,9 @@
                                 <div class="p-t-20">
                                     <a class="btn btn--radius btn--blue" onclick="goRegister()">Register</a>
                                 </div>
+                                <div class="p-t-20">
+                                    <a class="btn btn--radius btn--blue" onclick="withoutLogin()">Try Web</a>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -191,15 +194,24 @@
 
     <div class="card card-1">
         <div class="card-body">
-            <h2 class="title">Data Pendaftaran</h2>
+            <h2 class="title">Data </h2>
+            <form name="formSearch">
+                <div class="input-group">
+                    <input class="input--style-1" type="text" name="search" placeholder="Search">
+                </div>
+                <div class="p-t-20">
+                    <a class="btn btn--radius btn--green" onclick="doSearch()">Search</a>
+                </div>
+            </form>
             <table class="tableData" width="100%" border="1">
                 <tr>
                     <th>No</th>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>Password</th>
-                    <th>Tanggal Lahir</th>
-                    <th>Jenis Kelamin</th>
+<!--                    <th>Nama</th>-->
+<!--                    <th>Username</th>-->
+<!--                    <th>Email</th>-->
+<!--                    <th>Phone</th>-->
+                    <th>Nama Album</th>
+<!--                    <th>Website</th>-->
                     <th>Action</th>
                 </tr>
             </table>

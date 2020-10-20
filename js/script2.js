@@ -227,7 +227,7 @@ var c = (param1, param2) => {
 
 
 const result = userList.filter((val, idx) => val.gender == "P")
-console.warn(result)
+con8ole.warn(result)
 
 const resultMap = userList.map((val, idx) => {
     if (val.name == "admin") {
