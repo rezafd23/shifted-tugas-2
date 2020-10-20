@@ -78,7 +78,7 @@ var register = function () {
         }
 
         if (used) {
-            alert("Email telah digunakan!!")
+            alert("Email telah igunakan!!")
             return
         }
 

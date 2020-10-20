@@ -55,12 +55,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets\css" />
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets\img" />
       <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets\css" />
       <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets\img" />
       <recent name="C:\Users\btpnshifted\Documents\GitHub\shifted-tugas-2\assets" />
     </key>
@@ -78,7 +78,7 @@
       <workItem from="1602813097152" duration="722000" />
       <workItem from="1603028475032" duration="14115000" />
       <workItem from="1603073692666" duration="13653000" />
-      <workItem from="1603159893527" duration="8787000" />
+      <workItem from="1603159893527" duration="19190000" />
     </task>
     <servers />
   </component>
@@ -106,10 +106,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" width="1273" height="667" maximized="true" key="dock-window-1/0.0.1280.680@0.0.1280.680" timestamp="1603115251246" />
-    <state x="0" y="0" width="585" height="680" key="find.popup" timestamp="1603074153755">
+    <state x="0" y="0" width="585" height="680" key="find.popup" timestamp="1603184182591">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603074153755" />
+    <state x="0" y="0" width="585" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1603184182591" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1603118590975">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

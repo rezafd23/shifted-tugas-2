@@ -9,6 +9,7 @@ var idnumber
 var NameUser
 var idUser
 var dataAlbum = []
+var newAlbum = []
 var formLogin = document.getElementById("formLogin");
 var formRegister = document.getElementById("formRegister");
 var formBeranda = document.getElementById("formBeranda");
@@ -21,8 +22,11 @@ hideComponent(formCall)
 hideComponent(formAbout)
 hideComponent(navBar)
 
-var get = function (attr) {
+var getAll = function (attr) {
     return document.querySelectorAll(attr)
+}
+var get = function (attr) {
+    return document.querySelector(attr)
 }
 
 function showAbout() {
@@ -50,14 +54,15 @@ function showBeranda() {
     hideComponent(formRegister)
     showUserData()
 }
-var withoutLogin=()=>{
+
+var withoutLogin = async () => {
     showComponent(formBeranda)
     hideComponent(formLogin)
     showComponent(navBar)
     hideComponent(formAbout)
     hideComponent(formCall)
     hideComponent(formRegister)
-    idUser=""
+    idUser = ""
     showUserData()
 }
 
@@ -183,8 +188,8 @@ var doLogin = async () => {
         //     }
         // }
         if (statusLogin) {
-            idUser=statusLogin.id
-            NameUser=statusLogin.name
+            idUser = statusLogin.id
+            NameUser = statusLogin.name
             showComponent(formBeranda)
             showComponent(navBar)
             hideComponent(formLogin)
@@ -212,13 +217,14 @@ function saveEdit() {
     showData(dataAll)
     document.formEdit.reset()
 }
-var doSearch=()=>{
+
+var doSearch = () => {
     let tableData = document.getElementsByClassName("tableData")[0]
     let tr = tableData.children[0].children[0].outerHTML
 
-    search=document.formSearch.search.value;
-    dataAlbum.forEach((val,index)=>{
-        if (val.title==search){
+    search = document.formSearch.search.value;
+    dataAlbum.forEach((val, index) => {
+        if (val.title.includes(search)) {
             tr += `
             <tr align="center"> 
                 <td>${index + 1}</td>
@@ -235,9 +241,13 @@ var doSearch=()=>{
 }
 
 var showUserData = async () => {
-    console.log("isi ID USer "+idUser+"====="+NameUser)
+    console.log("isi ID USer " + idUser + "=====" + NameUser)
     let tableData = document.getElementsByClassName("tableData")[0]
+    let page=get(".pageTable")
     let tr = tableData.children[0].children[0].outerHTML
+    let th2 = get('.namealbum')
+    // console.log("album")
+    // console.log(th2)
 
 
     await fetch('https://jsonplaceholder.typicode.com/albums')
@@ -245,24 +255,12 @@ var showUserData = async () => {
         .then(json => dataAlbum = json)
         .catch(err => console.warn("Error" + err))
 
-    // dataAlbum.forEach(val=>{
-    //     console.log(val.title)
-    // })
-    // dataAll.forEach(val=>{
-    //     dataAlbum.forEach(valAl=>{
-    //       if (valAl.userId=="1"){
-    //
-    //           console.log("---"+valAl.title)
-    //       }
-    //     })
-    // })
-
-    if (idUser){
-        let title=get(".title")[1]
+    if (idUser) {
+        let title = getAll(".title")[1]
         console.log(title)
-        title.innerHTML="Album "+NameUser
-        dataAlbum.forEach((val,index)=>{
-            if (val.userId==idUser){
+        title.innerHTML = "Album " + NameUser
+        dataAlbum.forEach((val, index) => {
+            if (val.userId == idUser) {
                 tr += `
             <tr align="center"> 
                 <td>${index + 1}</td>
@@ -276,73 +274,102 @@ var showUserData = async () => {
             }
         })
     } else {
-        dataAlbum.forEach((val,index)=>{
-                tr += `
-            <tr align="center"> 
-                <td>${index + 1}</td>
-                <td>${val.title}</td>
-                <td>
-                <button onclick="editData(${index})">Update</button>
-                <button onclick="deleteData(${index})">Delete</button>
-                </td>
-            </tr>
-        `
-        })
-    }
-    // const dataTable = dataAll.map((val, index) => {
-    //
-    //     tr += `
-    //         <tr align="center">
-    //             <td>${index + 1}</td>
-    //             <td>${val.name}</td>
-    //             <td>${val.tglLahir}</td>
-    //             <td>
-    //             <button onclick="editData(${index})">Update</button>
-    //             <button onclick="deleteData(${index})">Delete</button>
-    //             </td>
-    //         </tr>
-    //     `
-    // })
-    // const resultMap = userList.map((val, idx) => {
-    //     if (val.name == "admin") {
-    //         return "admin"
-    //     }
-    // const dataTable=dataAll.filter((val,index)=>{
-    //     // let data=val[index]
-    //     tr += `
-    //         <tr align="center">
-    //             <td>${index + 1}</td>
-    //             <td>${val.name}</td>
-    //             <td>${val.email}</td>
-    //             <td>${val.password}</td>
-    //             <td>${val.tglLahir}</td>
-    //             <td>${val.jenisKelamin}</td>
-    //             <td>
-    //             <button onclick="editData(${index})">Update</button>
-    //             <button onclick="deleteData(${index})">Delete</button>
-    //             </td>
-    //         </tr>
-    //     `
-    // })
-    // dataTable
+        await fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+            .then(json => dataAll = json)
+            .catch(err => console.warn("Error Fetching Data" + err))
+        // th2.style.display="block"
+        // console.log("dataAll" + dataAll)
 
-    // for (i=0;i<dataAll.length;i++){
-    //     let data=dataAll[i]
-    //     tr += `
-    //         <tr align="center">
-    //             <td>${i + 1}</td>
-    //             <td>${data.name}</td>
-    //             <td>${data.email}</td>
-    //             <td>${data.password}</td>
-    //             <td>${data.tglLahir}</td>
-    //             <td>${data.jenisKelamin}</td>
-    //             <td>
-    //             <button onclick="editData(${i})">Update</button>
-    //             <button onclick="deleteData(${i})">Delete</button>
-    //             </td>
-    //         </tr>
-    //     `
-    // }
+        var ind = 0
+        for (i = 0; i < dataAll.length; i++) {
+            for (j = 0; j < dataAlbum.length; j++) {
+                if (dataAll[i].id == dataAlbum[j].userId) {
+                    ind += 1
+                    var newData = {
+                        name: dataAll[i].name,
+                        album: dataAlbum[j].title
+                    }
+                    newAlbum.splice(parseInt(ind), 1, newData)
+                }
+            }
+        }
+        newAlbum.splice(0,1)
+        // console.log("isi new album")
+        // console.log(newAlbum)
+        // console.log("th" + th2)
+        newAlbum.slice(0,10).forEach((val, index) => {
+            tr += `
+                        <tr align="center">
+                            <td>${index + 1}</td>
+                            <td>${val.name}</td>
+                            <td>${val.album}</td>
+                            <td>
+                            <button onclick="editData(${index})">Update</button>
+                            <button onclick="deleteData(${index})">Delete</button>
+                            </td>
+                        </tr>
+                    `
+        })
+
+        console.log("isipage")
+        console.log(page)
+        // var docButton=document.createDocumentFragment()
+        for (i=1;i<=parseInt(newAlbum.length/10);i++){
+            tr += `
+                        <tr align="right">
+<!--                            <td></td>-->
+<!--                            <td></td>-->
+<!--                            <td></td>-->
+                            <td colspan="4"><button onclick="getPage(${i})">${i}</button></td>
+                        </tr>
+                    `
+            // var button = document.createElement('button');
+            // button.setAttribute('text', i);
+            // docButton.appendChild(button)
+        }
+        // page.appendChild(docButton)
+    }
+    tableData.innerHTML = tr
+
+}
+var getPage=i=>{
+    let tableData = document.getElementsByClassName("tableData")[0]
+    let page=get(".pageTable")
+    let tr = tableData.children[0].children[0].outerHTML
+    console.log("isi album")
+    console.log(newAlbum)
+    var j
+    if (i>1){
+        j=(i*10)-10
+    } else {
+        j=0
+    }
+    newAlbum.slice(j,(i*10)).forEach((val, index) => {
+        tr += `
+                        <tr align="center">
+                            <td>${(i<=1)?index + 1:j+index+1}</td>
+                            <td>${val.name}</td>
+                            <td>${val.album}</td>
+                            <td>
+                            <button onclick="editData(${index})">Update</button>
+                            <button onclick="deleteData(${index})">Delete</button>
+                            </td>
+                        </tr>
+                    `
+    })
+    for (i=1;i<=parseInt(newAlbum.length/10);i++){
+        // var button = document.createElement('button');
+        // button.innerHTML=i
+        // button.style.marginRight='20px'
+        // button.onclick=getPage(i)
+        // document.querySelector("div.pageTable").appendChild(button)
+        tr += `
+                        <tr align="right">
+                            <td colspan="4"><button onclick="getPage(${i})">${i}</button></td>
+                        </tr>
+                    `
+    }
     tableData.innerHTML = tr
 }
 showUserData()
