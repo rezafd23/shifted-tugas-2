@@ -16,6 +16,8 @@ var formBeranda = document.getElementById("formBeranda");
 var formCall = document.getElementById("formCall");
 var formAbout = document.getElementById("formAbout");
 var navBar = document.getElementById("navBar");
+
+var albumSearch=[]
 hideComponent(formLogin)
 hideComponent(formBeranda)
 hideComponent(formCall)
@@ -176,17 +178,7 @@ var doLogin = async () => {
             .catch(err => console.warn("Error Fetching Data" + err))
 
         statusLogin = dataAll.find((data) => (data.username == email && password == '12345'))
-        // console.log(dataAll)
-        // statusLogin=dataAll.map((data)=>{
-        //     if (data.email==email&&data.password==password) return true
-        // })
-        // for (i=0;i<dataAll.length;i++){
-        //     let data=dataAll[i]
-        //     if (email==data.email&&password==data.password){
-        //         statusLogin=true
-        //         break
-        //     }
-        // }
+
         if (statusLogin) {
             idUser = statusLogin.id
             NameUser = statusLogin.name
@@ -223,9 +215,10 @@ var doSearch = () => {
     let tr = tableData.children[0].children[0].outerHTML
 
     search = document.formSearch.search.value;
-    dataAlbum.forEach((val, index) => {
-        if (val.title.includes(search)) {
-            tr += `
+    if (idUser){
+        dataAlbum.forEach((val, index) => {
+            if (val.title.includes(search)) {
+                tr += `
             <tr align="center"> 
                 <td>${index + 1}</td>
                 <td>${val.title}</td>
@@ -235,8 +228,55 @@ var doSearch = () => {
                 </td>
             </tr>
         `
+            }
+        })
+    } else {
+
+        newAlbum.forEach((val,index)=>{
+            if (val.album.includes(search)){
+                let data={
+                    name:val.name,
+                    album:val.album,
+                }
+                albumSearch.splice(index,0,data)
+            }
+        })
+
+        console.log("isi album search")
+        console.log(albumSearch)
+
+        var i=0
+        var j=albumSearch.length
+        var k
+
+        (j<10)?k=j:k=10
+
+        albumSearch.slice(i,k).forEach((val, index) => {
+            if (val.album.includes(search)){
+                tr += `
+            <tr align="center">
+                <td>${index + 1}</td>
+                <td>${val.name}</td>
+                <td>${val.album}</td>
+                <td>
+                <button onclick="editData(${index})">Update</button>
+                <button onclick="deleteData(${index})">Delete</button>
+                </td>
+            </tr>
+                `
+            }
+
+        })
+        console.log("isi length")
+        console.log(Math.ceil(j/10))
+        for (i=1;i<=Math.ceil(j/10);i++){
+            tr += `
+                 <tr align="center">
+                     <td colspan="4"><button onclick="getPage(${i})">${i}</button></td>
+                 </tr>
+                    `
         }
-    })
+    }
     tableData.innerHTML = tr
 }
 
@@ -338,15 +378,18 @@ var getPage=i=>{
     let page=get(".pageTable")
     let tr = tableData.children[0].children[0].outerHTML
     console.log("isi album")
-    console.log(newAlbum)
+    // console.log(tr)
     var j
     if (i>1){
         j=(i*10)-10
     } else {
         j=0
     }
-    newAlbum.slice(j,(i*10)).forEach((val, index) => {
-        tr += `
+    if (document.formSearch.search.value){
+        console.log("isi===="+j+"==="+(i*10))
+        console.log(albumSearch.slice(10,20))
+              albumSearch.slice(j,(i*10)).forEach((val,index)=>{
+                      tr += `
                         <tr align="center">
                             <td>${(i<=1)?index + 1:j+index+1}</td>
                             <td>${val.name}</td>
@@ -357,20 +400,47 @@ var getPage=i=>{
                             </td>
                         </tr>
                     `
-    })
-    for (i=1;i<=parseInt(newAlbum.length/10);i++){
-        // var button = document.createElement('button');
-        // button.innerHTML=i
-        // button.style.marginRight='20px'
-        // button.onclick=getPage(i)
-        // document.querySelector("div.pageTable").appendChild(button)
-        tr += `
-                        <tr align="right">
-                            <td colspan="4"><button onclick="getPage(${i})">${i}</button></td>
+        })
+        for (i=1;i<=Math.ceil(albumSearch.length/10);i++){
+            tr += `
+                 <tr align="center">
+                     <td colspan="4"><button onclick="getPage(${i})">${i}</button></td>
+                 </tr>
+                    `
+        }
+        tableData.innerHTML = tr
+    } else {
+        newAlbum.slice(j,(i*10)).forEach((val, index) => {
+            tr += `
+                        <tr align="center">
+                            <td>${(i<=1)?index + 1:j+index+1}</td>
+                            <td>${val.name}</td>
+                            <td>${val.album}</td>
+                            <td>
+                            <button onclick="editData(${index})">Update</button>
+                            <button onclick="deleteData(${index})">Delete</button>
+                            </td>
                         </tr>
                     `
+        })
+        for (i=1;i<=parseInt(newAlbum.length/10);i++){
+            // var button = document.createElement('button');
+            // button.innerHTML=i
+            // button.className='btnPage'
+            // button.style.marginRight='20px'
+            // button.addEventListener("click",getPage(i))
+            // button.onclick=getPage(i)
+            // document.querySelector("div.pageTable").appendChild(button)
+            tr += `
+                        <tr align="center">
+                            <td align="center" colspan="4"><button onclick="getPage(${i})">${i}</button></td>
+                        </tr>
+                    `
+        }
     }
     tableData.innerHTML = tr
+    console.log("cek Button")
+    console.log(btnPage)
 }
 showUserData()
 
