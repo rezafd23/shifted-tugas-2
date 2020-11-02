@@ -1,0 +1,74 @@
+.loginBody {
+    margin-top:-16px;
+    }
+
+.loginHeader {
+    height: 150px;
+    width: 100%;
+    background-image: url(https://i.pinimg.com/originals/11/c0/d3/11c0d343176a014fe218a94786077c66.jpg);
+    background-size: cover;
+}
+
+.loginHeader ul {
+    list-style-type:none;
+    padding-top: 100px;
+    padding-left: 5%;
+}
+
+.loginHeader li {
+    float: left;
+    margin: auto;
+    padding:5px 10px;
+}
+
+.isi {
+    background-color: #f1f2f6;
+    width: 100%;
+    float: left;
+    height: 444px;
+    padding-top: 30px;
+}
+
+.isi-info {
+    background-color: #f1f2f6;
+    float: left;
+    width: 40%;
+    margin-left: 120px;
+    padding-top: 100px;
+}
+
+.isi-login {
+    background-color: white;
+    float: right;
+    width: 26%;
+    margin-right: 10%;
+    border-radius: 5px;
+    padding-left: 14px;
+}
+
+.lupa-sandi {
+    border-top: 10px;
+    border-bottom: 10px;
+    margin-left: 90px;
+    color:#24b0e3;
+}
+
+.loginHeader a:hover {
+    color: #007aff;
+}
+
+.loginHeader a {
+    color: #787b81;
+}
+
+.loginBody h1 {
+    color: #e48825;
+}
+
+.loginBody h3 {
+    color: #787b81;
+}
+
+.tableData1{
+
+}
